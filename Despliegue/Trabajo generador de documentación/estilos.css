@@ -123,6 +123,7 @@ section p {
 }
 
 .binst section{
+    max-width: 900px;
     display: flex;  /* Usar flexbox para organizar los elementos */
     align-items: center;    /* Alinear verticalmente la imagen con el contenido */
     gap: 20px;  /* Espacio entre la imagen y el texto */
@@ -136,4 +137,10 @@ section p {
 
 .binst div{
     flex: 1;    /* Hacer que el contenido del div ocupe el resto del espacio de la seccion*/
+}
+
+/*esto es solo para los comentarios en la pagina de instalacion*/
+span{
+    font-weight: bold;
+    color: green;
 }
