@@ -1,3 +1,6 @@
+//@ts-check 
+//Esto de arriba nos permite ver si hay errores, como que yo le ponga a una funcion un parametro que es un number una string
+
 /**
  * Este no lo uso pero es mas facil, cuando llames a la funcion le introduces los numeros y ya esta.
  * Arguments.length es una array que ya viene definida a la que se le van a agregar todos los parametros que se pongan a la hora de llamar la función
@@ -13,7 +16,7 @@ function sumPrueba(){
 
 /**
  * Funcion para sumar
- * @param {*} arr array a introducir
+ * @param {any} arr array a introducir
  * @returns resultado con la suma de los numeros del array
  */
 function sum(arr){
@@ -53,7 +56,7 @@ function countTheArgs(){
 }
  /**
   * Misma funcion que la de arriba pero poniendole un array como parametro
-  * @param {*} arr array con elementos de diferente tipo
+  * @param {any} arr array con elementos de diferente tipo
   * @returns cantidad de elementos del array
   */
 function contarParametros(arr){
@@ -66,8 +69,8 @@ function contarParametros(arr){
 
 /**
  * esta funcion concatena dos arrays
- * @param {*} arr1 primer array a concatenar
- * @param {*} arr2 segundo array a concatenar
+ * @param {any} arr1 primer array a concatenar
+ * @param {any} arr2 segundo array a concatenar
  * @returns concatenacion de los arrays
  */
 function combineTwoArrays(arr1, arr2){
@@ -91,7 +94,7 @@ function sumEveryOther(){
 
 /**
  * Funcion que devuelve si un numero es divisible por 3
- * @param {*} num numero
+ * @param {number} num numero
  * @returns true o false segun sea o no divisible por 3
  */
 function divisible(num){
@@ -104,12 +107,14 @@ function divisible(num){
 
 /**
  * Funcion para decir si un numero es divisible por otro
- * @param {*} num numero uno
- * @param {*} num2 numero por el cual va a ser divisible o no 
+ * @param {string} a numero uno
+ * @param {string} b numero por el cual va a ser divisible o no 
  * @returns true o false
  */
-function divisibleEntre(num, num2){
+function divisibleEntre(a, b){
     let divisib = false;
+    let num = parseInt(a);
+    let num2 = parseInt(b);
     if (num % num2 == 0){
         divisib = true;
     }
@@ -118,9 +123,9 @@ function divisibleEntre(num, num2){
 
 /**
  * funcion para decir si es verdadero o falso el que este dentro del rango o no el valor
- * @param {*} valor //numero para combrobar si esta entre los limites
- * @param {*} rangoInf //limite inferior
- * @param {*} rangoSup //limite superior
+ * @param {string} valor //numero para combrobar si esta entre los limites
+ * @param {string} rangoInf //limite inferior
+ * @param {string} rangoSup //limite superior
  * @returns true o false
  */
 function rango(valor, rangoInf, rangoSup){
@@ -134,8 +139,8 @@ function rango(valor, rangoInf, rangoSup){
 }
 
 /**
- * coge un numero metico como string y dice si tiene o no 3 digitos
- * @param {*} num 
+ * coge un numero metido como string y dice si tiene o no 3 digitos
+ * @param {string} num 
  * @returns true o false
  */
 function tieneTresDigitos(num){
@@ -150,8 +155,8 @@ function tieneTresDigitos(num){
 
 /**
  * Funcion para calcular ar alrea de un rectangulo
- * @param {*} lado1 
- * @param {*} lado2 
+ * @param {number} lado1 
+ * @param {number} lado2 
  * @returns multiplica los lados
  */
 function areaRectangulo(lado1, lado2){
@@ -160,9 +165,9 @@ function areaRectangulo(lado1, lado2){
 
 /**
  * Funcion para calcular el imc
- * @param {*} pes peso
- * @param {*} alt altura
- * @returns el imc
+ * @param {number} pes peso
+ * @param {number} alt altura
+ * @returns {number} el imc
  */
 function imc(pes, alt){
     return pes / (Math.pow(alt, 2));
@@ -170,9 +175,9 @@ function imc(pes, alt){
 
 /**
  * Funcion para aplicar un descuento
- * @param {*} prec 
- * @param {*} desc 
- * @returns precio final con el descuento aplicado
+ * @param {number} prec 
+ * @param {number} desc 
+ * @returns {number} precio final con el descuento aplicado
  */
 function precioFinal(prec, desc){
     let cantDesc = (desc * prec) / 100;
@@ -181,8 +186,8 @@ function precioFinal(prec, desc){
 
 /**
  * calcula el factorial de cualquier numero
- * @param {*} num 
- * @returns el factorial
+ * @param {number} num 
+ * @returns {number} el factorial
  */
 function factorial(num){
     let fac = 1;    //hay que inicializar a 1 porque sino siempre multiplica por 0 y cualquie numero por 0 es 0

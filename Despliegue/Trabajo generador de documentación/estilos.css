@@ -7,7 +7,7 @@ body {
 /*ESTILOS DEL ÍNDICE*/
 /* Título */
 .bindex{
-    background-image: url(fondo.jpeg);
+    background-image: url(./imgs/fondo.jpeg);
 }
 
 h1 {    /*tanto para el indice como para beneficios y desventajas*/
@@ -77,7 +77,7 @@ section p {
 /*ESTILOS DE BENEFICIOS Y DESVENTAJAS*/
 /*Estilos del body de beneficios*/
 .bben, .bdes{
-    background-image: url(ben.jpg);
+    background-image: url(./imgs/ben.JPG);
     background-size: 100vw 100vh;   /*Con estos tres backgroun la imagen no se repite*/
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -111,7 +111,7 @@ section p {
 
 /*ESTILOS DE INSTALACION Y PREPARACION*/
 .binst{
-    background-image: url(ins.jpg);
+    background-image: url(./imgs/ins.jpg);
     background-size: cover;
 }
 
@@ -143,4 +143,76 @@ section p {
 span{
     font-weight: bold;
     color: green;
+}
+
+/*Página de ejemplos*/
+.bejem{
+    background-image: url(./imgs/ejemp.jpg);
+    background-size: 100vw 100vh;   /*Con estos tres backgroun la imagen no se repite*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bejem section{
+    width: 90%;
+    background-color: rgb(154, 154, 167);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel{
+    width: 80%;
+    max-width: 120em;
+    background-color: rgb(181, 181, 196);
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px black;
+    overflow: hidden;
+}
+
+.carrusel .grande{
+    width: 400%;
+    height: 300px;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+
+.carrusel .img{
+    width: calc((100% / 4)-2em);
+    margin-right: 1em;
+    height: 100%; /* Asegúrate de que las imágenes ocupen todo el alto de su contenedor */
+    object-fit: cover; /* Ajusta el comportamiento de las imágenes para que llenen el contenedor */
+}
+
+.carrusel .puntos{
+    width: 100%;
+    padding: 0 2em;
+    margin-bottom: 1em;
+    margin-top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.carrusel .punto{
+    background-color: aqua;
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px black;
+}
+
+.carrusel .punto.activo{
+    background-color: orange;
 }

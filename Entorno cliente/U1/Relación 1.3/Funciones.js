@@ -1,7 +1,7 @@
 /**
  * Funcion para calcular la edad dada el año de nacimiento como parámetro y la fecha actual que se coge del sistema
- * @param {año de nacimiento} anyo 
- * @returns años que tiene la persona actualmente
+ * @param {string} anyo el año en el que nacio la persona
+ * @returns string con los años
  */
 function ageCalculator (anyo) {
     let fActual = new Date().getFullYear();
@@ -12,9 +12,9 @@ function ageCalculator (anyo) {
 
 /**
  * Función que calcula la cantidad de snacks que necesitaras para los años qu te queden
- * @param {años actuales} anyosP 
- * @param {años que crees que vas a vivir} anyosMaximosP 
- * @param {cantidad de snack diario} cantDiariaP 
+ * @param {number} anyosP 
+ * @param {number} anyosMaximosP 
+ * @param {num} cantDiariaP 
  * @returns la cantidad a ingerir
  */
 function supplyCalculator(anyosP, anyosMaximosP, cantDiariaP){
@@ -28,7 +28,7 @@ function supplyCalculator(anyosP, anyosMaximosP, cantDiariaP){
 
 /**
  * Función para calcular la circunferencia de un circulo
- * @param {radio del circulo} radio 
+ * @param {number} radio 
  * @returns circunferencia
  */
 function circumference(radio){
@@ -40,7 +40,7 @@ function circumference(radio){
 
 /**
  * Función para calcular el área de un circulo
- * @param {radio del circulo} radio 
+ * @param {number} radio 
  * @returns area
  */
 function area(radio){
@@ -52,7 +52,7 @@ function area(radio){
 
 /**
  * Funcion que pasa de fahrenheit a celsius y viceversa
- * @param {la temperatura que se desea cambiar} temp 
+ * @param {string} temp 
  * @returns la temperatura cambiada
  */
 function convertTemperature(temp){
