@@ -58,7 +58,7 @@
                             "plugins": [],<br>
                             "source": {<br>
                                 "include": ["src"],     <span>//carpeta de la que va  a leer lor archivos</span> <br>
-                                "includePattern": ".js$",    <span>//leera los archivos con extension .js</span> <br>
+                                "includePattern": ".+\\.js(doc|x)?$",    <span>//leera los archivos con extension .js</span> <br>
                                 "excludePattern": "(node_modules|docs)"	<span>//lo que no va a leer seran dos carpetas</span> <br>
                             },  <br>
                             "templates": {	    <span>//que va a generar la documentacion</span> <br>
@@ -76,14 +76,24 @@
                     </li>
                     <li>
                         Crear una carpeta src que sera la carpeta desde la que va a leer los archivos este json
-                        y meter el archivo index.js dentro de esta carpeta.
+                        y meter el archivo index.js dentro de esta carpeta que sera donde metamos el proyecto que queramos documentar.
                     </li>
                     <li>
                         En la terminal voy a decirle que archivo de configuracion quiero que use, es el que hemos creado (jsdoc.json) con los comandos:
                         <br>
-                        jsdoc -c jsdoc.json
+                        jsdoc -c jsdoc.json
                         <br>
                         npx jsdoc -c jsdoc.json
+                    </li>
+                    <li>
+                        En el archivo package.json en la parte de scripts, a parte de test añadimos otro mas <br>
+                        "docs": jsdoc -c jsdoc.json <br>
+                        Esto va aser el comando que usaremos para generar la documentación. El comando sera este: <br>
+                        npm run docs <br>
+                        Esto generara una carpeta docs.
+                    </li>
+                    <li>
+                        Finalmente en la carpeta de docs tendreis un index.html, si abris ese index os abrira una pagina con toda la documentación que habeis creado.
                     </li>
                 </ul>
             </p>
