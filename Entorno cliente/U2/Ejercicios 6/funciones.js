@@ -159,3 +159,8 @@ function enseñarTitulo(){
     let titulo = document.title;
     document.getElementById("titulo").innerHTML = titulo;
 }
+
+function verUrl(){
+    let url = document.URL;
+    document.getElementById("url").innerHTML = url;
+}
