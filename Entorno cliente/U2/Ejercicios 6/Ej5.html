@@ -28,7 +28,13 @@
     <p id="url"></p>
 
     <h4>E)</h4>
-    
-    <h4>F)</h4>
+    <p>Ejemplos de sobreescritura</p>
+    <script>
+        document.write("Ejemplo que no sobreescribe hecho con un document.write() porque la págino no ha terminado de cargarse");
+    </script>
+    <br>
+    <p>La página ya esta cargada, asi que si pinchas abajo, todo lo escrito en la pagina se sustituira por un téxto</p>
+    <br>
+    <a onclick="paginaCargada()">Clic para sobreescribir el contenido de la página</a>
 </body>
 </html>

@@ -155,12 +155,52 @@ function deDondeViene(){
     }
 }
 
+/**
+ * Funcion para enseñar el titulo de la página
+ */
 function enseñarTitulo(){
     let titulo = document.title;
     document.getElementById("titulo").innerHTML = titulo;
 }
 
+/**
+ * Finción para ver el titulo de la página
+ */
 function verUrl(){
     let url = document.URL;
     document.getElementById("url").innerHTML = url;
+}
+
+/**
+ * funcion para sobre escribir la página entera ya que document.write es lo que hace cuando la página ya ha terminado de cargar
+ */
+function paginaCargada(){
+    document.write("Como la página ya estaba cargada por completo, y al escribir esto con document.write(), se sobre escribe la página");
+}
+
+/**
+ * Funcion para contas las etiquetas que tienen el atributo id
+ */
+function contarAnclas(){
+    let etiquetas = document.querySelectorAll("*");
+    let cont = 0;
+    for(let i = 0; i<etiquetas.length; i++){
+        if (etiquetas[i].id){
+            cont ++;
+        }
+    }
+    document.getElementById("parrafo").innerHTML = cont;
+}
+
+/**
+ * Funcion que escribira algo en la primera etiqueta que contenga el atributo id
+ */
+function mostrarTextoEnPrimeraEtiquetaConAtributoId(){
+    let etiquetas = document.querySelectorAll("*");
+    for(let i = 0; i<etiquetas.length; i++){
+        if (etiquetas[i].id){
+            etiquetas[i].innerHTML = "Este texto se muestra en la primera ancla";
+            break;  //break para que se salga del bucle cuando encuentre el primer elemento con un id
+        }
+    }
 }
